@@ -17,7 +17,7 @@ def main():
 
     @st.cache(persist=True)
     def load_data():
-        data = pd.read_csv("C:/Users/deep.ai/Desktop/DS_projects/ML_app_project/mushrooms.csv")
+        data = pd.read_csv("mushrooms.csv")
         labelencoder=LabelEncoder()
         for col in data.columns:
             data[col] = labelencoder.fit_transform(data[col])
